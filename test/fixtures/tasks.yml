@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  due_date: 2024-11-22
+  priority: 1
+  remind_before_at: 2024-11-22 15:29:13
+  assignee: 1
+  completion_status: false
+  category_id: 1
+  workspace_id: 1
+
+two:
+  title: MyString
+  description: MyText
+  due_date: 2024-11-22
+  priority: 1
+  remind_before_at: 2024-11-22 15:29:13
+  assignee: 1
+  completion_status: false
+  category_id: 1
+  workspace_id: 1

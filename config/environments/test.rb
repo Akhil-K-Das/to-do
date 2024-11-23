@@ -45,7 +45,7 @@ Rails.application.configure do
 
   # Unlike controllers, the mailer instance doesn't have any context about the
   # incoming request so you'll need to provide the :host parameter yourself.
-  config.action_mailer.default_url_options = { host: "www.example.com" }
+  config.action_mailer.default_url_options = { host: "akhilkn4@gmail.com" }
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
@@ -64,4 +64,14 @@ Rails.application.configure do
 
   # Raise error when a before_action's only/except options reference missing actions.
   config.action_controller.raise_on_missing_callback_actions = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.mailgun.org',
+    port:                 587,
+    domain:               Rails.application.credentials.dig(:mailgun, :domain), # Replace with your Mailgun domain
+    user_name:            "postmaster@#{Rails.application.credentials.dig(:mailgun, :domain)}", # Replace with your Mailgun postmaster
+    password:             Rails.application.credentials.dig(:mailgun, :api_key),
+    authentication:       'plain',
+    enable_starttls_auto: true
+  }
 end

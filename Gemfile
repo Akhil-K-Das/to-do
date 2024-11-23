@@ -38,7 +38,26 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem 'shoulda-matchers', '~> 5.0'
+
+  gem 'factory_bot_rails'
+
+  gem 'simplecov', require: false
 end
 
 gem "devise", "~> 4.9.2"
 
+
+gem "mailgun-ruby", "~> 1.2"
+
+gem "kaminari", "~> 1.2"
+
+# gem "jwt", "~> 2.9"
+gem 'devise-jwt'
+
+gem "rspec-rails", "~> 7.1"
+
+gem "google-api-client", "~> 0.53.0"
+
+gem 'sidekiq'
