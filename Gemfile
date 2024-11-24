@@ -61,3 +61,6 @@ gem "rspec-rails", "~> 7.1"
 gem "google-api-client", "~> 0.53.0"
 
 gem 'sidekiq'
+
+ruby '3.2.5'
+
